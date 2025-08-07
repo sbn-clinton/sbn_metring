@@ -212,8 +212,13 @@ export function About() {
                 }}
                 className="inline-block p-8 bg-white/10 rounded-full mb-6 backdrop-blur-sm"
               >
-                <div className="w-32 h-32 bg-gradient-to-br from-white/20 to-white/40 rounded-full flex items-center justify-center relative">
-                  <span className="text-4xl font-bold text-white">GC</span>
+                <div className="w-32 h-32 bg-gradient-to-br from-white/20 to-white/40 rounded-full flex items-center justify-center relative overflow-hidden">
+                  <Image
+                    src="/images/globe.png" // ✅ change to your image path or URL
+                    alt="Founder"
+                    fill
+                    className="object-cover rounded-full"
+                  />
                   <motion.div
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{
@@ -224,6 +229,7 @@ export function About() {
                   />
                 </div>
               </motion.div>
+
               <div className="space-y-2 text-white/80">
                 <p>
                   <strong className="text-white">Email:</strong>{" "}
